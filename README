@@ -5,7 +5,7 @@ How To Use
 ----------
 
 1. Generate some files
-./script/generate captcha_on_iknow [your name]
+./script/generate captcha_on_iknow [your iknow account]
 
 2. Include some javascripts and stylesheets
 (ex)

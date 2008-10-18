@@ -2,6 +2,13 @@ require 'open-uri'
 require 'json'
 
 class ActionView::Base
+  def captcha_on_iknow_js_tag
+    <<-eos
+<script>IKNOW_CAPTCHA_PARAM_KEY = '#{IKnowCaptcha.param_key}'</script>
+#{javascript_include_tag 'captcha_on_iknow'}
+    eos
+  end
+
   def iknow_captcha_field
     captcha = (controller.session[IKnowCaptcha.session_key] ||= IKnowCaptcha.new).reset!
     # Depend on mode and mode_changeable

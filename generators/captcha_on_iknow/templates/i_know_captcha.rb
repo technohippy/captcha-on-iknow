@@ -4,7 +4,7 @@ class IKnowCaptcha
 
   DEFAULT_USER = '<%= account %>'
   USER_PATTERN = '[USER]'
-  API_KEY = '28qc9n9akvhg2uz4qu9nx532'
+  API_KEY = '' # set your API key, if you want
   API_URI_TEMPLATE = "http://api.iknow.co.jp/users/#{USER_PATTERN}/items.json?api_key=#{API_KEY}"
   @session_key = :IKNOW_CHAPTCHA
   @param_key = :iknow_captcha_answer

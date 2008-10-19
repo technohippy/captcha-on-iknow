@@ -13,4 +13,5 @@ iknow_captcha.replay = function(url) {
   embed.setAttribute('hidden', true);
   embed.setAttribute('autostart', true);
   document.body.appendChild(embed);
+  setTimeout(function(){document.body.removeChild(embed)}, 10000);
 };
